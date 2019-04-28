@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 81033e5d6340df049a6cb695dc634da7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - carrotPrefab: {fileID: 1545318131601440, guid: eb288590463467446be07acc1e712e6a,
+      type: 3}
+  - rabbitSmooth: {fileID: 1944330715375778, guid: 325dde71bc7f9ab4b83bbc8e32b12b41,
+      type: 3}
+  - rabbitFlat: {fileID: 1893945063996550, guid: 24aef9bbab064c943bcd3e7bc602e55a,
+      type: 3}
+  - whiteFur: {fileID: 2100000, guid: daf1e3cae56466e46a80db8080e0f79e, type: 2}
+  - greyFur: {fileID: 2100000, guid: e0ea211043ab04248be06cf8cab838e9, type: 2}
+  - brownFur: {fileID: 2100000, guid: f1a1b51a87b27f748bee7f97a72a9332, type: 2}
+  - whiteLowPoly: {fileID: 2100000, guid: fc2ac620ffa220c43ac9ede86d2ff71e, type: 2}
+  - greyLowPoly: {fileID: 2100000, guid: 1dc515bf14fd9f74b8e97802330a85a2, type: 2}
+  - brownLowPoly: {fileID: 2100000, guid: d0b819e592356ae4a82185fbdf792b8c, type: 2}
+  - Apple: {fileID: 1829371231341652, guid: 426b44a7575f71e479fab4f4e8431989, type: 3}
+  - Peanut: {fileID: 1329430274803916, guid: 8c8c7d8f829a2d24ebe78eddb5eaff57, type: 3}
+  - Pear: {fileID: 1763817136346132, guid: 0f3575c567ebe8241a4a6ad511fd7017, type: 3}
+  - Peach: {fileID: 1541859410316496, guid: 4fe5a7bcbee1651418ea031a87ff53e4, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

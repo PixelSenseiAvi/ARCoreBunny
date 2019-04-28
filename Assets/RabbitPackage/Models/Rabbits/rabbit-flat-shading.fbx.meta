@@ -1,0 +1,204 @@
+fileFormatVersion: 2
+guid: 751590c515e68bf4abedd52dd1e83f04
+timeCreated: 1506795799
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: BackFoot_IK_L
+    100004: BackFoot_IK_R
+    100006: BackFoot_Target_L
+    100008: BackFoot_Target_L_end
+    100010: BackFoot_Target_R
+    100012: BackFoot_Target_R_end
+    100014: Ear_L
+    100016: Ear_R
+    100018: EarTop_L
+    100020: EarTop_L_end
+    100022: EarTop_R
+    100024: EarTop_R_end
+    100026: Foot_L
+    100028: Foot_L_end
+    100030: Foot_R
+    100032: Foot_R_end
+    100034: FootFront_L
+    100036: FootFront_L_end
+    100038: FootFront_R
+    100040: FootFront_R_end
+    100042: FrontFoot_IK_L
+    100044: FrontFoot_IK_R
+    100046: FrontFoot_Target_L
+    100048: FrontFoot_Target_L_end
+    100050: FrontFoot_Target_R
+    100052: FrontFoot_Target_R_end
+    100054: Head
+    100056: Hip_L
+    100058: Hip_R
+    100060: Hock_L
+    100062: Hock_R
+    100064: Knee_L
+    100066: Knee_R
+    100068: Mouth_L
+    100070: Mouth_L_end
+    100072: Mouth_R
+    100074: Mouth_R_end
+    100076: Rabbit
+    100078: //RootNode
+    100080: Rump
+    100082: Shin_L
+    100084: Shin_L_end
+    100086: Shin_R
+    100088: Shin_R_end
+    100090: ShinFront_L
+    100092: ShinFront_L_end
+    100094: ShinFront_R
+    100096: ShinFront_R_end
+    100098: Shoulder_L
+    100100: Shoulder_R
+    100102: Spine1
+    100104: Spine2
+    100106: Spine3
+    100108: Tail
+    100110: Tail_end
+    400000: Armature
+    400002: BackFoot_IK_L
+    400004: BackFoot_IK_R
+    400006: BackFoot_Target_L
+    400008: BackFoot_Target_L_end
+    400010: BackFoot_Target_R
+    400012: BackFoot_Target_R_end
+    400014: Ear_L
+    400016: Ear_R
+    400018: EarTop_L
+    400020: EarTop_L_end
+    400022: EarTop_R
+    400024: EarTop_R_end
+    400026: Foot_L
+    400028: Foot_L_end
+    400030: Foot_R
+    400032: Foot_R_end
+    400034: FootFront_L
+    400036: FootFront_L_end
+    400038: FootFront_R
+    400040: FootFront_R_end
+    400042: FrontFoot_IK_L
+    400044: FrontFoot_IK_R
+    400046: FrontFoot_Target_L
+    400048: FrontFoot_Target_L_end
+    400050: FrontFoot_Target_R
+    400052: FrontFoot_Target_R_end
+    400054: Head
+    400056: Hip_L
+    400058: Hip_R
+    400060: Hock_L
+    400062: Hock_R
+    400064: Knee_L
+    400066: Knee_R
+    400068: Mouth_L
+    400070: Mouth_L_end
+    400072: Mouth_R
+    400074: Mouth_R_end
+    400076: Rabbit
+    400078: //RootNode
+    400080: Rump
+    400082: Shin_L
+    400084: Shin_L_end
+    400086: Shin_R
+    400088: Shin_R_end
+    400090: ShinFront_L
+    400092: ShinFront_L_end
+    400094: ShinFront_R
+    400096: ShinFront_R_end
+    400098: Shoulder_L
+    400100: Shoulder_R
+    400102: Spine1
+    400104: Spine2
+    400106: Spine3
+    400108: Tail
+    400110: Tail_end
+    4300000: Rabbit
+    7400000: Armature|Dance
+    7400002: Armature|DeathInRun
+    7400004: Armature|DeathInSit
+    7400006: Armature|EatCarrot
+    7400008: Armature|EatGrass
+    7400010: Armature|Hop
+    7400012: Armature|IdleCalm
+    7400014: Armature|IdleCalm.001
+    7400016: Armature|IdleNervous
+    7400018: Armature|Jump
+    7400020: Armature|Run
+    7400022: Armature|Watch
+    9500000: //RootNode
+    13700000: Rabbit
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
