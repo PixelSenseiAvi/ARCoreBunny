@@ -77,19 +77,19 @@
      <None Include="Assets\GoogleARCore\Editor\ARCoreiOSDependencies.template" />
      <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.100.0.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/AR/ARCoreTest2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>D:/AR/backup/ARCoreTest2/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>D:/AR/ARCoreTest2/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>D:/AR/backup/ARCoreTest2/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>D:/AR/ARCoreTest2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>D:/AR/backup/ARCoreTest2/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/AR/ARCoreTest2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>D:/AR/backup/ARCoreTest2/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>D:/AR/ARCoreTest2/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>D:/AR/backup/ARCoreTest2/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -332,49 +332,49 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Google.Protobuf">
- <HintPath>D:/AR/ARCoreTest2/Assets/GoogleARCore/SDK/Plugins/Google.Protobuf.dll</HintPath>
+ <HintPath>D:/AR/backup/ARCoreTest2/Assets/GoogleARCore/SDK/Plugins/Google.Protobuf.dll</HintPath>
  </Reference>
  <Reference Include="Google.IOSResolver_v1.2.100.0">
- <HintPath>D:/AR/ARCoreTest2/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.100.0.dll</HintPath>
+ <HintPath>D:/AR/backup/ARCoreTest2/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.100.0.dll</HintPath>
  </Reference>
  <Reference Include="Google.JarResolver_v1.2.100.0">
- <HintPath>D:/AR/ARCoreTest2/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.100.0.dll</HintPath>
+ <HintPath>D:/AR/backup/ARCoreTest2/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.100.0.dll</HintPath>
  </Reference>
  <Reference Include="Google.VersionHandler">
- <HintPath>D:/AR/ARCoreTest2/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
+ <HintPath>D:/AR/backup/ARCoreTest2/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
  </Reference>
  <Reference Include="Google.VersionHandlerImpl_v1.2.100.0">
- <HintPath>D:/AR/ARCoreTest2/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.100.0.dll</HintPath>
+ <HintPath>D:/AR/backup/ARCoreTest2/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.100.0.dll</HintPath>
  </Reference>
  <Reference Include="GitHub.Api.45">
- <HintPath>D:/AR/ARCoreTest2/Assets/Plugins/GitHub/Editor/GitHub.Api.45.dll</HintPath>
+ <HintPath>D:/AR/backup/ARCoreTest2/Assets/Plugins/GitHub/Editor/GitHub.Api.45.dll</HintPath>
  </Reference>
  <Reference Include="GitHub.Logging">
- <HintPath>D:/AR/ARCoreTest2/Assets/Plugins/GitHub/Editor/GitHub.Logging.dll</HintPath>
+ <HintPath>D:/AR/backup/ARCoreTest2/Assets/Plugins/GitHub/Editor/GitHub.Logging.dll</HintPath>
  </Reference>
  <Reference Include="GitHub.Unity.45">
- <HintPath>D:/AR/ARCoreTest2/Assets/Plugins/GitHub/Editor/GitHub.Unity.45.dll</HintPath>
+ <HintPath>D:/AR/backup/ARCoreTest2/Assets/Plugins/GitHub/Editor/GitHub.Unity.45.dll</HintPath>
  </Reference>
  <Reference Include="GitHub.UnityShim">
- <HintPath>D:/AR/ARCoreTest2/Assets/Plugins/GitHub/Editor/GitHub.UnityShim.dll</HintPath>
+ <HintPath>D:/AR/backup/ARCoreTest2/Assets/Plugins/GitHub/Editor/GitHub.UnityShim.dll</HintPath>
  </Reference>
  <Reference Include="sfw.net">
- <HintPath>D:/AR/ARCoreTest2/Assets/Plugins/GitHub/Editor/sfw.net.dll</HintPath>
+ <HintPath>D:/AR/backup/ARCoreTest2/Assets/Plugins/GitHub/Editor/sfw.net.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
- <HintPath>D:/AR/ARCoreTest2/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+ <HintPath>D:/AR/backup/ARCoreTest2/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>D:/AR/ARCoreTest2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>D:/AR/backup/ARCoreTest2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>D:/AR/ARCoreTest2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>D:/AR/backup/ARCoreTest2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>D:/AR/ARCoreTest2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>D:/AR/backup/ARCoreTest2/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
- <HintPath>D:/AR/ARCoreTest2/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+ <HintPath>D:/AR/backup/ARCoreTest2/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
