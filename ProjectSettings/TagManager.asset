@@ -4,11 +4,27 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Carrot
+  - apple
+  - peanut
+  - startQuad
   - lvl1_placement(1)
   - lvl1placement(2)
-  - lvl2placement(1)
   - lvl2placement(2)
+  - Carrot
+  - peach
+  - pear
+  - lemon
+  - strawberry
+  - watermelon
+  - banana
+  - TextPlacement
+  - rabbitSmooth
+  - textObj
+  - mainPrefab
+  - finalPlacement
+  - TMP
+  - score
+  - Controller
   layers:
   - Default
   - TransparentFX

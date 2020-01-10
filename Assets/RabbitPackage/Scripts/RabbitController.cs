@@ -1,11 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GoogleARCore;
+//using GoogleARCore.Examples.Common;
+using UnityEngine.EventSystems;
+using TMPro;
+using UnityEngine.UI;
 
 public class RabbitController : MonoBehaviour {
 
     Animator animator;
-   
+
+    private Transform startPos;
+
     // anim hashes
     int speedHash = Animator.StringToHash("speed");
     int foodHash = Animator.StringToHash("food");
@@ -15,13 +22,13 @@ public class RabbitController : MonoBehaviour {
     int jumpHash = Animator.StringToHash("jump");
     int danceHash = Animator.StringToHash("dance");
 
-    [Header("Carrot")]
+    [Header("Rabbit")]
     public GameObject carrotPrefab;
     GameObject boneForCarrot;
-
-    [Header("Rabbit Display")]
+    
     public GameObject rabbitSmooth;
     public GameObject rabbitFlat;
+    GameObject startPlacement;
 
     SkinnedMeshRenderer rabbitSmoothMesh, rabbitFlatMesh;
 
@@ -33,28 +40,73 @@ public class RabbitController : MonoBehaviour {
     public Material brownLowPoly;
 
     bool smoothActive = true;
+    bool textTrigger;
+
+    [Header("Text")]
+    public TextMeshPro textMesh;
 
     //TextScript
-    //public TextMesh textObject;
-    int stage = 0;
+    private float startTime;
+    string stage;
+    float speed;
 
     //initial and last positions
     Vector3 lp, fp;
-    public GameObject Apple, Peanut, Pear, Peach;
-    bool correct = false;
+    [Header("Fruits")]
+    public GameObject Apple;
+    public GameObject Peanut;
+    public GameObject Pear;
+    public GameObject Peach;
+    public int score;
     Vector3 touchLoc;
+    float mTimer;
 
+    float dist1, dist2;
+    [Header("Other Variables")]
+    public GameObject finalPlacement;
+    Vector3 adjustedPos;
+
+    [Range(0.0f, 1.0f)]
+    public float LightThreshold = 0.5f;
+    bool flag;
+    private GameObject textGameObject;
+
+    public GameObject ScoreVar;
 
     void Start () {
+
+        ScoreVar = GameObject.Find("ScoreVar");
+
+        startTime = Time.deltaTime;
+        speed = 0.5f;
+        mTimer = 0.0f;
         animator = GetComponentInChildren<Animator>();
         // create nicer solution
         boneForCarrot = GameObject.FindGameObjectWithTag("Carrot");
 
         rabbitSmoothMesh = rabbitSmooth.GetComponentInChildren<SkinnedMeshRenderer>();
         rabbitFlatMesh = rabbitFlat.GetComponentInChildren<SkinnedMeshRenderer>();
+
+        //startPos = rabbitSmooth.transform.position;
+        startPlacement = GameObject.FindGameObjectWithTag("startQuad");
+        stage = "1";
+
+        adjustedPos = new Vector3(0.0f, 0.0f, 0.0f);
+        flag = false;
+
+        //textGameObject = GameObject.FindWithTag("TMP");
+        //textMesh = GameObject.FindWithTag("TMP").GetComponent<TextMeshProUGUI>();
+
+        textMesh.text = "An ______ a day keeps the doctor away";
+
+        score = 0;
     }
 
     void Update() {
+
+        ScoreVar.GetComponent<Text>().text = score.ToString();
+
+        mTimer += Time.deltaTime;
 
         float MaxTimeWait = 1;
         float VariancePosition = 1;
@@ -69,29 +121,199 @@ public class RabbitController : MonoBehaviour {
                 Touch touch = Input.GetTouch(0);
                 //get touch location
                 touchLoc = touch.position;
-                stage++;
-                //Jump();
-                animator.SetTrigger(jumpHash);
+
+                Ray ray = Camera.main.ScreenPointToRay(touchLoc);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit))
+                {
+                    
+                    adjustedPos = new Vector3(hit.transform.position.x, hit.transform.position.y - 0.25f,
+                        hit.transform.position.z);
+                    //interpolate here
+                    float distance = Vector3.Distance(rabbitSmooth.transform.position,
+                        adjustedPos); // hit.transform.position
+
+                    float distCovered = (Time.deltaTime - startTime) * speed;
+                    //float fracJourney = distCovered / distance;
+                    float fracJourney = distCovered / distance;
+
+                    Jump();
+                    transform.position = Vector3.Lerp(
+                            rabbitSmooth.transform.position, adjustedPos,
+                            fracJourney); //hit.transform.position
+
+                    //Destroy
+                    //Destroy(hit.collider.gameObject);
+                    
+                    if (hit.collider.name == "apple")// && stage == "1"
+                    {
+                        score++;
+                        stage = "2";
+                        animator.SetTrigger(danceHash);
+
+                        this.transform.position = hit.transform.position;
+
+                        StartCoroutine(scoreCoroutine("I am a symbol of mortality"));
+                        //text.text="I am a symbol of mortality";
+                        Destroy(hit.collider.gameObject);
+
+                    }
+                    else if (hit.collider.name == "peanut" && stage != "1")
+                    {
+                        stage = "2";
+                        this.transform.position = hit.transform.position;
+
+                        //text.text = "I am a symbol of mortality";
+                        SetText("I am a symbol of mortality");
+                        Destroy(hit.collider.gameObject);
+                    }
+
+                    if (hit.collider.name == "pear")//&& stage == "2"
+                    {
+                        score++;
+                        stage = "3";
+                        this.transform.position = hit.transform.position;
+
+                        animator.SetTrigger(danceHash);
+                        Destroy(hit.collider.gameObject);
+
+                        // text.text = "rich in Vitamin C";
+                        StartCoroutine(scoreCoroutine("rich in Vitamin C"));
+                    }
+                    else if (hit.collider.name == "peach" && stage != "2")
+                    {
+                        stage = "3";
+                        this.transform.position = hit.transform.position;
+
+                        Destroy(hit.collider.gameObject);
+
+                        // text.text = "rich in Vitamin C";
+                        SetText("rich in Vitamin C");
+                    }
+
+                    if (hit.collider.name == "lemon") //&& stage == "3"
+                    {
+                        score++;
+                        stage = "4";
+                        this.transform.position = hit.transform.position;
+
+                        animator.SetTrigger(danceHash);
+                        Destroy(hit.collider.gameObject);
+
+                        //text.text = "I am yellow, peel me I am white";
+                        StartCoroutine(scoreCoroutine("I am yellow, peel me I am white"));
+
+                    }
+                    else if (hit.collider.name == "strawberry" && stage !="3")
+                    {
+                        stage = "4";
+                        Destroy(hit.collider.gameObject);
+                        this.transform.position = hit.transform.position;
+
+                        //text.text = "I am yellow, peel me I am white";
+                        SetText("I am yellow, peel me I am white");
+                    }
+
+                    if (hit.collider.name == "banana") // && stage == "4"
+                    {
+                        score++;
+                        stage = "Complete";
+                        this.transform.position = hit.transform.position;
+
+                        animator.SetTrigger(danceHash);
+                        Destroy(hit.collider.gameObject);
+
+                        StartCoroutine(CoroutineOne());
+
+                        // text.text = "Completed";
+                        if (score == 4)
+                            SetText("Winner");
+                        else
+                            SetText("Score: " + score);
+                    }
+                }
+
             }
         }
+
+
+        if (flag)
+        {
+            // try Light estimation
+            if (Frame.LightEstimate.PixelIntensity < LightThreshold)
+            {
+                //Dark
+                DeathInSit();
+                //NervousIdle();
+            }
+            else
+            {
+                //Light
+                //this.GetComponent<Text>().text = "LIGHT " + Frame.LightEstimate.PixelIntensity.ToString();
+                Watch();
+            }
+        }
+
+    }
+
+    private IEnumerator CoroutineOne()
+    {
+        yield return new WaitForSeconds(4);
+
+        
+        //interpolate here
+        float distance = Vector3.Distance(rabbitSmooth.transform.position,
+            finalPlacement.transform.position);
+
+        float distCover = (Time.time - startTime) * speed;
+        float fracJourn = distCover / distance;
+
+        Jump();
+        transform.position = Vector3.Lerp(
+           rabbitSmooth.transform.position, finalPlacement.transform.position,
+           fracJourn);
         
 
-        switch (stage)
-        {
-            case 1:
-                //textObject.text = "An ____ a day keeps the doctor away";
-
-                if (Vector3.Distance(touchLoc, Apple.transform.position) <
-                    Vector3.Distance(touchLoc, Peanut.transform.position))
-                {
-                    //interpolate here
-                }
-                else {  }
-                break;
-            default:
-                break;
-        }
+        yield return StartCoroutine(CoroutineTwo());
     }
+
+    private IEnumerator CoroutineTwo()
+    {
+        animator.SetTrigger(danceHash);
+        yield return new WaitForSeconds(2);
+        //EatGrass();
+        //yield return new WaitForSeconds(2);
+        EatCarrot();
+
+        //light estimation
+        yield return new WaitForSeconds(2);
+        flag = true;
+    }
+
+
+    private IEnumerator scoreCoroutine(string newText)
+    {
+        SetText("+1");
+        yield return new WaitForSeconds(2);
+        SetText(newText); 
+    }
+
+    private void SetText(string riddle)
+    {
+        textMesh.text = riddle;
+    }
+
+    public int GetScore()
+    {
+        return score;
+    }
+    //void FixedUpdate()
+    //{
+    //    if (textTrigger)
+    //        text.text = riddle;
+    //}
+
+
     /* For testing only
      * private void Update()
     {
